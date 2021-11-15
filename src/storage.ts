@@ -115,11 +115,11 @@ export class Storage {
     @Inject(PLATFORM_ID) private platformId: Object
   ) {
     this._dbPromise = new Promise((resolve, reject) => {
-      if (isPlatformServer(this.platformId)) {
-        const noopDriver = getNoopDriver();
-        resolve(noopDriver);
-        return;
-      }
+      // if (isPlatformServer(this.platformId)) {
+      //   const noopDriver = getNoopDriver();
+      //   resolve(noopDriver);
+      //   return;
+      // }
 
       let db: LocalForage;
 
